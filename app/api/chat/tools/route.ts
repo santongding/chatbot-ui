@@ -171,6 +171,7 @@ export async function POST(request: Request) {
 
           // Check if custom headers are set
           const customHeaders = schemaDetail.headers
+          console.log(fullUrl, parsedArgs.parameters, schemaDetail.headers)
           if (customHeaders && typeof customHeaders === "string") {
             headers = JSON.parse(customHeaders)
           }
